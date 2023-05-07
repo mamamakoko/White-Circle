@@ -1,0 +1,48 @@
+.header-container {
+    min-height: 15vh;
+    max-height: auto;
+    background-color: #f8f9fa;
+    padding-left: 5em;
+    padding-right: 1em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header img {
+    width: auto;
+    min-height: 5em;
+    max-height: 7em;
+}
+
+.header .link {
+    padding: 1em;
+}
+
+.header a {
+    margin-left: 1em;
+    margin-right: 1em;
+    text-decoration: none;
+    color: #023047;
+}
+
+.empty {
+    width: 12em;
+}
+
+.header-nav ul {
+    display: inline-flex;
+    list-style-type: none;
+    column-gap: 5em;
+}
+
+.header-nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 3em;
+}

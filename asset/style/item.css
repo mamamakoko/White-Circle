@@ -1,0 +1,36 @@
+.item {
+    width: 90vw;
+    height: auto;
+    background-color: #a8dadc;
+
+    /* temporary position */
+    margin-top: 2em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2em;
+
+    padding: 1em;
+}
+
+.item-image {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.product img {
+    height: 10em;
+    width: 9em;
+}
+
+.product {
+    background-color: green;
+    margin: 1em;
+    text-align: center;
+    width: 15%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
