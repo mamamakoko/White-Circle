@@ -24,7 +24,7 @@ include('./src/dbcon.php');
 
 <body>
 
-    <?php include "./src/header.php"; ?>
+    <?php include "./src/header2.php"; ?>
 
     <!-- sliding images -->
     <div class="carousel">

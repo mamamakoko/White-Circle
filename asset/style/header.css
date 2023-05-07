@@ -14,7 +14,7 @@
     align-items: center;
 }
 
-.header img {
+.logo>img {
     width: auto;
     min-height: 5em;
     max-height: 7em;
@@ -45,4 +45,17 @@
     display: flex;
     justify-content: center;
     margin-top: 3em;
+}
+
+/* style configuration for header 2 */
+.user-pic {
+    height: 10px;
+    width: 10px;
+    background-color: aqua;
+}
+
+.user-pic img {
+    border-radius: 50%;
+    height: 10px;
+    width: auto;
 }
