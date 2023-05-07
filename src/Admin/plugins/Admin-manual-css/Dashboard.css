@@ -1,0 +1,127 @@
+.container-fluid {
+    margin: 0 10px;
+    overflow: hidden;
+}
+
+.circle {
+    min-width: 100px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: linear-gradient(145deg, #cacaca, #f0f0f0);
+    border: 3px solid rgb(101, 71, 139);
+    overflow: hidden;
+
+}
+
+.circle i {
+    color: #fff;
+    font-size: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.bx-Info {
+    padding: 10px;
+    color: gray;
+    min-width: 150px;
+    width: 150px;
+}
+
+.label {
+    font-size: 1.1em;
+}
+
+.row {
+    margin: 10px -5px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-flow: wrap;
+}
+
+.column {
+    width: 24%;
+    padding: 10px 0;
+    box-sizing: border-box;
+}
+
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+/* ------------------ media ------------------ */
+@media screen and (max-width: 1080px) {
+    .column {
+        width: 48%;
+    }
+
+    .card {
+        margin: auto;
+        width: 100%;
+    }
+
+    .circle {
+        min-width: 100px;
+        width: 100px;
+        height: 100px;
+    }
+
+    .cardactive {
+        width: 100%;
+    }
+
+    .circle i {
+        font-size: 80px;
+    }
+
+    .bx-Info {
+        padding: 10px;
+        color: gray;
+        min-width: 150px;
+        width: 150px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .column {
+        width: 90%;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .circle {
+        min-width: 90px;
+        width: 90px;
+        height: 90px;
+    }
+
+    .cardactive {
+        width: 100%;
+    }
+
+    .circle i {
+        font-size: 80px;
+    }
+
+    .bx-Info {
+        padding: 10px;
+        color: gray;
+        min-width: 150px;
+        width: 150px;
+    }
+}
