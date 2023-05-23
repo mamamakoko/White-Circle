@@ -1,0 +1,38 @@
+* {
+    border: 1px solid black;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+#cart-total {
+    text-align: right;
+    margin-top: 20px;
+}
+
+#checkout-btn {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#cart-items {
+    margin-top: 20px;
+}
+
+.cart-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #888;
+
+    height: auto;
+}

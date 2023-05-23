@@ -3,7 +3,8 @@
         <div class="row">
             <div class="col-3">
                 <h3>ABOUT US</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p>Welcome to White Circle bag's, Your One-Stop Shop for Stylish and Functional bags! 
+    White circle understands that a bag is more than simply an accessory; it is an extension of your own style as well as a practical companion for your daily journeys. We provide you a handpicked choice of the finest bags from known designers and trusted brands with a passion for fashion and a commitment to quality.</p>
             </div>
             <div class="col-2">
                 <h3>CATEGORIES</h3>
