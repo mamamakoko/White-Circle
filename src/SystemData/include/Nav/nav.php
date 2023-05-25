@@ -16,15 +16,15 @@
             $Categories_Name = htmlentities($result->Categories_Name);
             $Categories_ID = htmlentities($result->Categories_ID);
             $url = "./?page=src/SystemData/include/Cat/&cat012={$Categories_ID}";
-            ?>
+    ?>
             <li>
-                <a href="<?php echo $url ?>">
+                <a style="text-decoration: none; font-family: Calibri; font-weight: bold; font-size: large; color: #023047;" href="<?php echo $url ?>">
                     <span class="links_name">
                         <?php echo $Categories_Name ?>
                     </span>
                 </a>
             </li>
-            <?php
+    <?php
             $cnt++;
         }
     } else {

@@ -12,8 +12,11 @@
     padding-bottom: 1em;
 }
 
-.header-container, .header a {
+.header-container,
+.header-nav > a {
     text-decoration: none;
+    font-family: calibri;
+    font-size: large;
 }
 
 .header {
@@ -21,6 +24,8 @@
     justify-content: space-between;
     align-items: center;
 }
+
+
 
 .header>div {
     width: 100%;
@@ -35,9 +40,23 @@
     justify-content: center;
 }
 
+.header-container {
+    
+    text-decoration: none;
+    font-family: Calibri;
+    font-weight: bold;
+    font-size: large;
+    color: #023047;
+}
+
 .header>.link {
     display: flex;
     justify-content: end;
+    text-decoration: none;
+    font-family: Calibri;
+    /* font-weight: bold; */
+    font-size: large;
+    color: #023047;
 }
 
 .logo>img {
@@ -71,6 +90,7 @@
     display: flex;
     justify-content: center;
     margin-top: 3em;
+
 }
 
 /* style configuration for user profile in header 2 */

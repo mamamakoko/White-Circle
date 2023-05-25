@@ -19,6 +19,9 @@ include('./src/dbcon.php');
     <link rel="stylesheet" href="./asset/style/footer.css">
     <link rel="stylesheet" href="./asset/style/product.css">
 
+    <!-- icons from fontawesome -->
+    <script src="https://kit.fontawesome.com/2075c28e43.js" crossorigin="anonymous"></script>
+
     <title>White Circle</title>
 </head>
 
@@ -28,7 +31,7 @@ include('./src/dbcon.php');
 
     <!-- sliding images -->
     <div class="carousel">
-        <button class="carousel-button prev">Prev</button>
+        <button class="carousel-button prev"><i class="fa-solid fa-chevron-left" style="color: #f8f9fa;"></i></button>
         <div class="carousel-images">
             <img src="./src/SystemData/imgs/carousel/1.jpeg" alt="Image 1">
             <img src="./src/SystemData/imgs/carousel/2.jpeg" alt="Image 2">
@@ -36,7 +39,7 @@ include('./src/dbcon.php');
             <img src="./src/SystemData/imgs/carousel/4.jpeg" alt="Image 4">
             <img src="./src/SystemData/imgs/carousel/5.jpeg" alt="Image 5">
         </div>
-        <button class="carousel-button next">Next</button>
+        <button class="carousel-button next"><i class="fa-solid fa-chevron-right" style="color: #f8f9fa;"></i></button>
     </div>
 
     <!---------- sliding script ---------->
