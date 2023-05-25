@@ -17,6 +17,7 @@
     <div class="cart-container">
         <!-- Cart items will be dynamically added here -->
         <h1>Lalagyan ng mga items</h1>
+        <?php include "./cart-item.php"; ?>
     </div>
 
     <div id="cart-total">

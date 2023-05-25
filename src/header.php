@@ -6,12 +6,29 @@
         </div>
 
         <div class="link">
-            <a href="./src/login.php" class="form-account">SIGN UP/LOG IN</a>
+            <a href="./src/cart.php" class="form-account">SIGN UP/LOG IN</a>
         </div>
     </header>
 
     <!-- horizontal -->
-    <div class="header-nav">
+    <div class="header-nav" id="navbar">
         <?php include('./src/SystemData/Include/Nav/nav.php'); ?>
     </div>
+
+    <script>
+        window.onscroll = function() {
+            myFunction()
+        };
+
+        var navbar = document.getElementById("navbar");
+        var sticky = navbar.offsetTop;
+
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        }
+    </script>
 </div>
