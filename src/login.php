@@ -14,11 +14,12 @@
 <body>
     <div class="container">
         <div class="welcome">
-            <h3>Papalitan mo 'to kay lyme hihi</h3>
+            <h3>Welcome To White Cicle</h3>
+            <small>Carrying your World with style</small>
         </div>
 
         <div class="form-container">
-            <form>
+            <form action="./functions.php" method="post">
                 <div class="input-label">
                     <label for="email">Email:</label>
                     <input type="email" id="email" name="email" required>
@@ -32,7 +33,7 @@
 
                 <br><br>
 
-                <input type="submit" value="Log in">
+                <input type="submit" value="Log in" name="logInForm">
                 <br>
                 <br>
                 <br>

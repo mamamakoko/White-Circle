@@ -280,4 +280,55 @@ if (isset($_POST['edit-product-form'])) {
     header('location:admin.php?page=Admin/plugins/Product/');
     exit();
 }
+
+// signUp function
+
+if (isset($_POST['signUpForm'])) {
+    $firstName = $_POST['firstName'];
+    $lastName = $_POST['lastName'];
+    $phoneNumber = $_POST['phoneNumber'];
+    $email = $_POST['email'];
+    $password = md5($_POST['password']);
+
+    $sql = "INSERT INTO customers (Customers_FirstName, Customers_LastName, Customers_Phone, Customers_Email, Customers_Password) VALUES (:firstName, :lastName, :phoneNumber, :email, :password)";
+    $query = $dbh->prepare($sql);
+    $query->bindParam(':firstName', $firstName, PDO::PARAM_STR);
+    $query->bindParam(':lastName', $lastName, PDO::PARAM_STR);
+    $query->bindParam(':phoneNumber', $phoneNumber, PDO::PARAM_STR);
+    $query->bindParam(':email', $email, PDO::PARAM_STR);
+    $query->bindParam(':password', $password, PDO::PARAM_STR);
+    $query->execute();
+
+    $lastInsertId = $dbh->lastInsertId();
+    if ($lastInsertId) {
+        echo "Registration successful!";
+        header('location:login.php');
+    } else {
+        echo "Registration failed.";
+        // Redirect the user back to the signup page or display an error message
+        // For example, header('location: signup.php?error=RegistrationFailed');
+    }
+}
+
+// login form
+if (isset($_POST['logInForm'])) {
+    $email = $_POST['email'];
+    $password = md5($_POST['password']);
+
+    $sql = "SELECT * FROM customers WHERE Customers_Email = :email AND Customers_Password = :password";
+    $query = $dbh->prepare($sql);
+    $query->bindParam(':email', $email, PDO::PARAM_STR);
+    $query->bindParam(':password', $password, PDO::PARAM_STR);
+    $query->execute();
+    $results = $query->fetchAll(PDO::FETCH_OBJ);
+
+    if ($query->rowCount() > 0) {
+        foreach ($results as $result) {
+            echo "login successful!";
+        }
+    } else {
+        echo "login failed.";
+    }
+}
+
 ?>
