@@ -31,16 +31,12 @@
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required><br><br>
 
-                <input type="submit" value="Sign Up">
+                <input type="submit" value="Sign In">
 
-
-                <br><br>
-
-                <input type="submit" value="Log in">
                 <br>
                 <br>
                 <br>
-                <a href="./signin.php"><small>Create an account</small></a>
+                <a href="./login.php"><small>I already have an account.</small></a>
             </form>
         </div>
     </div>
