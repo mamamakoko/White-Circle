@@ -10,7 +10,7 @@ if ($query->rowCount() > 0) {
 ?>
 
         <div class="product">
-            <a href="./src/ProductItems.php?proid=<?php echo $result->Product_ID; ?>" style="text-decoration: none; font-family: calibri; color: #1a1a1a">
+            <a href="./src/ProductItems.php?proid=<?php echo $result->Product_ID; ?>" style="text-decoration: none; font-family: calibri; color: #1a1a1a;">
                 <img src="./src/SystemData/imgs/<?php echo $result->Product_Path . '/' . $result->Product_Thumbnail; ?>">
                 <h3 class="name">
                     <?php echo $result->Product_Name; ?>

@@ -25,10 +25,10 @@
     height: 320px;
     width: 245px;
     border-radius: 5px;
-}
 
-.item a {
-    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .product img {
@@ -37,8 +37,4 @@
     border-radius: 5px;
     object-fit: cover;
     box-shadow: 0px 0px 5px 0px #023047;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
