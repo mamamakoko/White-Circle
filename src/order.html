@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order</title>
+</head>
+
+<body>
+    <h1>Order Form</h1>
+
+    <form action="php file boi" method="POST">
+        <label for="receiverName">Receiver's Name:</label>
+        <input type="text" id="receiverName" name="receiverName" required><br><br>
+
+        <label for="amount">Amount:</label>
+        <input type="text" id="amount" name="amount" required><br><br>
+
+        <label for="shipping">Shipping Services:</label>
+        <select id="shipping" name="shipping" required>
+            <option value="">-- Select Shipping Service --</option>
+            <option value="standard">Standard Shipping</option>
+            <option value="express">Express Shipping</option>
+            <option value="overnight">Overnight Shipping</option>
+        </select><br><br>
+
+        <label for="address">Address:</label><br>
+        <input type="text" id="city" name="city" placeholder="City" required>
+        <input type="text" id="state" name="state" placeholder="State" required>
+        <input type="text" id="zip" name="zip" placeholder="Zip Code" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="tracking">Tracking Number:</label>
+        <input type="text" id="tracking" name="tracking" required><br><br>
+
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" required><br><br>
+
+        <input type="submit" value="Place Order">
+</body>
+
+</html>
