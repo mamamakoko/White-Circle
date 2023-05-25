@@ -5,28 +5,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../asset/style/login.css">
+
     <title>Log in</title>
 </head>
 
 <body>
-    <div class="welcome"></div>
-    <div class="form-container">
-        <form>
-            <label for="firstName">First Name:</label>
-            <input type="text" id="firstName" name="firstName" required><br><br>
+    <div class="container">
+        <div class="welcome">
+            <h3>Papalitan mo 'to kay lyme hihi</h3>
+        </div>
 
-            <label for="lastName">Last Name:</label>
-            <input type="text" id="lastName" name="lastName" required><br><br>
+        <div class="form-container">
+            <form>
+                <div class="input-label">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
 
-            <label for="phoneNumber">Phone Number:</label>
-            <input type="tel" id="phoneNumber" name="phoneNumber" required pattern="[0-9]{11}"><br><br>
+                <div class="input-label">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required><br><br>
 
-            <input type="submit" value="Log in">
-        </form>
+                <br><br>
+
+                <input type="submit" value="Log in">
+                <br>
+                <br>
+                <br>
+                <a href="./signin.php"><small>Create an account</small></a>
+            </form>
+        </div>
     </div>
+
 
 </body>
 
