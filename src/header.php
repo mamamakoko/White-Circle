@@ -6,7 +6,7 @@
         </div>
 
         <div class="link">
-            <a href="./src/login.php" class="form-account">SIGN UP/LOG IN</a>
+            <a href="./src/cart.php" class="form-account">SIGN UP/LOG IN</a>
         </div>
     </header>
 
