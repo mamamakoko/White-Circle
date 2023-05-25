@@ -1,6 +1,6 @@
 <ul>
     <li>
-        <a href="./">
+        <a href="./" style="text-decoration: none;">
             <span class="links_name">All</span>
         </a>
     </li>
@@ -18,7 +18,7 @@
             $url = "./?page=src/SystemData/include/Cat/&cat012={$Categories_ID}";
     ?>
             <li>
-                <a style="text-decoration: none; font-family: Calibri; font-weight: bold; font-size: large; color: #023047;" href="<?php echo $url ?>">
+                <a href="<?php echo $url ?>" style="text-decoration: none;">
                     <span class="links_name">
                         <?php echo $Categories_Name ?>
                     </span>
