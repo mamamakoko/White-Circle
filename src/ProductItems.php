@@ -17,10 +17,7 @@ include('./dbcon.php');
 <body>
     <?php
     $proid = intval($_GET['proid']);
-    $sql = "SELECT *
-    FROM `products`
-    JOIN `products_images` ON `products`.`Product_ID` = `products_images`.`Product_ID`
-    WHERE `products`.`Product_ID` = :proid";
+    $sql = "SELECT * FROM `products` where `products`.`Product_ID`=:proid";
     $query = $dbh->prepare($sql);
     $query->bindParam(':proid', $proid, PDO::PARAM_STR);
     $query->execute();
@@ -39,17 +36,17 @@ include('./dbcon.php');
         <h1>
             <?php echo $result->Product_Name ?>
         </h1>
+        <nav>
+            <ul>
+                <li><a href="#description">Description</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+            </ul>
+        </nav>
     </header>
     <main>
         <div class="product-image">
-            <?php
-            if ($query->rowCount() > 0) {
-                foreach ($results as $result) {
-                    ?>
-                    <img src="./SystemData/imgs/<?php echo $result->Product_Path . '/' . $result->Product_Image; ?>"
-                        alt="Product Image">
-                <?php }
-            } ?>
+            <img src="./SystemData/imgs/<?php echo $result->Product_Path . '/' . $result->Product_Thumbnail; ?>"
+                alt="Product Image">
         </div>
 
         <div class="product-details">
@@ -105,23 +102,5 @@ include('./dbcon.php');
         <p>&copy; 2023 Product Name</p>
     </footer>
 </body>
-<style>
-    .product-image {
-        background-color: red;
-        display: flex;
-    }
-
-    .product-image img {
-        width: 20%;
-    }
-
-    .description {
-        white-space: pre-wrap;
-        white-space: -moz-pre-wrap;
-        white-space: -pre-wrap;
-        white-space: -o-pre-wrap;
-        word-wrap: break-word;
-    }
-</style>
 
 </html>
