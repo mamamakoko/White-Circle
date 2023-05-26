@@ -2,7 +2,7 @@
     <header class="header">
         <div class="empty"></div>
         <div class="logo">
-            <img src="./src/SystemData/page/logo.png" alt="white circle logo">
+            <img src="src/SystemData/imgs/page/logo.png" alt="white circle logo">
         </div>
 
         <div class="link">
