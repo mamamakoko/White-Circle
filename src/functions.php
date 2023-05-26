@@ -325,6 +325,7 @@ if (isset($_POST['logInForm'])) {
     if ($query->rowCount() > 0) {
         foreach ($results as $result) {
             echo "login successful!";
+            header('location:../');
         }
     } else {
         echo "login failed.";
