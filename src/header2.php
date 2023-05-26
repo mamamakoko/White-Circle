@@ -11,7 +11,7 @@
             <div class="user-pic">
                 <img src="src/SystemData/imgs/page/logo.png" alt="user profile picture">
             </div>
-
+            <a href="./src/cart.php" style="text-decoration: none;"><i class="fa-solid fa-cart-shopping fa-2xl"></i></a>
             <a href="./src/logout.php" class="form-account">Log out</a>
         </div>
     </header>

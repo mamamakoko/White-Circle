@@ -27,7 +27,13 @@ include('./src/dbcon.php');
 
 <body>
 
-    <?php include "./src/header.php"; ?>
+    <?php
+    if ($Customers_ID == null) {
+        include "./src/header.php";
+    } else {
+        include "./src/header2.php";
+    }
+    ?>
 
     <!-- sliding images -->
     <div class="carousel">
@@ -39,86 +45,84 @@ include('./src/dbcon.php');
             <img src="./src/SystemData/imgs/carousel/4.jpeg" alt="Image 4">
             <img src="./src/SystemData/imgs/carousel/5.jpeg" alt="Image 5">
         </div>
-        <button class="carousel-button next"><i class="fa-solid fa-chevron-right" style="color: #f8f9fa;"></i></button>
-    </div>
 
-    <!---------- sliding script ---------->
-    <script>
-        const carousel = document.querySelector('.carousel');
-        const carouselImages = document.querySelector('.carousel-images');
-        const prevButton = document.querySelector('.prev');
-        const nextButton = document.querySelector('.next');
-        let counter = 1;
-        const size = carousel.clientWidth;
+        <!---------- sliding script ---------->
+        <script>
+            const carousel = document.querySelector('.carousel');
+            const carouselImages = document.querySelector('.carousel-images');
+            const prevButton = document.querySelector('.prev');
+            const nextButton = document.querySelector('.next');
+            let counter = 1;
+            const size = carousel.clientWidth;
 
-        carouselImages.style.transform = `translateX(-${size * counter}px)`;
+            carouselImages.style.transform = `translateX(-${size * counter}px)`;
 
-        nextButton.addEventListener('click', () => {
-            if (counter >= carouselImages.children.length - 1) {
+            nextButton.addEventListener('click', () => {
+                if (counter >= carouselImages.children.length - 1) {
+                    carouselImages.style.transition = "transform 0.4s ease-in-out";
+                    counter = 1;
+                    carouselImages.style.transform = `translateX(-${size * counter}px)`;
+                    return;
+                }
                 carouselImages.style.transition = "transform 0.4s ease-in-out";
-                counter = 1;
+                counter++;
                 carouselImages.style.transform = `translateX(-${size * counter}px)`;
-                return;
-            }
-            carouselImages.style.transition = "transform 0.4s ease-in-out";
-            counter++;
-            carouselImages.style.transform = `translateX(-${size * counter}px)`;
-        });
+            });
 
-        prevButton.addEventListener('click', () => {
-            if (counter <= 0) return;
-            carouselImages.style.transition = "transform 0.4s ease-in-out";
-            counter--;
-            carouselImages.style.transform = `translateX(-${size * counter}px)`;
-        });
-
-        carouselImages.addEventListener('transitionend', () => {
-            if (carouselImages.children[counter].id === 'last-clone') {
-                carouselImages.style.transition = "none";
-                counter = carouselImages.children.length - 2;
-                carouselImages.style.transform = `translateX(-${size * counter}px)`;
-            }
-            if (carouselImages.children[counter].id === 'first-clone') {
+            prevButton.addEventListener('click', () => {
+                if (counter <= 0) return;
                 carouselImages.style.transition = "transform 0.4s ease-in-out";
-                counter = carouselImages.children.length - counter;
+                counter--;
                 carouselImages.style.transform = `translateX(-${size * counter}px)`;
-            }
-        });
+            });
 
-        // Automatic sliding every 5 seconds
-        setInterval(() => {
-            if (counter >= carouselImages.children.length - 1) {
-                carouselImages.style.transition = "none";
-                counter = 1;
+            carouselImages.addEventListener('transitionend', () => {
+                if (carouselImages.children[counter].id === 'last-clone') {
+                    carouselImages.style.transition = "none";
+                    counter = carouselImages.children.length - 2;
+                    carouselImages.style.transform = `translateX(-${size * counter}px)`;
+                }
+                if (carouselImages.children[counter].id === 'first-clone') {
+                    carouselImages.style.transition = "transform 0.4s ease-in-out";
+                    counter = carouselImages.children.length - counter;
+                    carouselImages.style.transform = `translateX(-${size * counter}px)`;
+                }
+            });
+
+            // Automatic sliding every 5 seconds
+            setInterval(() => {
+                if (counter >= carouselImages.children.length - 1) {
+                    carouselImages.style.transition = "none";
+                    counter = 1;
+                    carouselImages.style.transform = `translateX(-${size * counter}px)`;
+                    return;
+                }
+                carouselImages.style.transition = "transform 0.4s ease-in-out";
+                counter++;
                 carouselImages.style.transform = `translateX(-${size * counter}px)`;
-                return;
-            }
-            carouselImages.style.transition = "transform 0.4s ease-in-out";
-            counter++;
-            carouselImages.style.transform = `translateX(-${size * counter}px)`;
-        }, 5000);
-    </script>
+            }, 5000);
+        </script>
 
-    <!-- used with quary to automatically organize the content -->
-    <div class="item">
-        <div class="item-image">
-            <?php $page = isset($_GET['page']) ? $_GET['page'] : 'Home'; ?>
+        <!-- used with quary to automatically organize the content -->
+        <div class="item">
+            <div class="item-image">
+                <?php $page = isset($_GET['page']) ? $_GET['page'] : 'Home'; ?>
 
-            <?php
-            if (!file_exists($page . ".php") && !is_dir($page)) {
-                include '404.html';
-            } else {
-                if (is_dir($page))
-                    include $page . './index.php';
-                else
-                    include $page . '.php';
-            }
-            ?>
+                <?php
+                if (!file_exists($page . ".php") && !is_dir($page)) {
+                    include '404.html';
+                } else {
+                    if (is_dir($page))
+                        include $page . './index.php';
+                    else
+                        include $page . '.php';
+                }
+                ?>
+            </div>
         </div>
-    </div>
 
-    <!---------- footer php ---------->
-    <?php include "./src/footer.php"; ?>
+        <!---------- footer php ------------>
+        <?php include "./src/footer.php"; ?>
 </body>
 
 </html>

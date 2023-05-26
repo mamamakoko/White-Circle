@@ -19,7 +19,7 @@ include('./dbcon.php');
 </head>
 
 <body>
-
+    <!-- loader where action when data is not ready yet -->
     <div id="preloader">
         <div class="spinner"></div>
     </div>
