@@ -3,51 +3,47 @@ session_start();
 error_reporting(0);
 
 include('./src/dbcon.php');
-if (strlen($_SESSION['login']) == 0) {
-    header('location:indx.php');
-} else { ?>
-    <!DOCTYPE html>
-    <html lang="en">
+?>
+<!DOCTYPE html>
+<html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="stylesheet" href="./asset/style/index.css">
-        <link rel="stylesheet" href="./asset/style/header.css">
-        <link rel="stylesheet" href="./asset/style/carousel.css">
-        <link rel="stylesheet" href="./asset/style/item.css">
-        <link rel="stylesheet" href="./asset/style/footer.css">
-        <link rel="stylesheet" href="./asset/style/product.css">
+    <link rel="stylesheet" href="./asset/style/index.css">
+    <link rel="stylesheet" href="./asset/style/header.css">
+    <link rel="stylesheet" href="./asset/style/carousel.css">
+    <link rel="stylesheet" href="./asset/style/item.css">
+    <link rel="stylesheet" href="./asset/style/footer.css">
+    <link rel="stylesheet" href="./asset/style/product.css">
 
-        <!-- icons from fontawesome -->
-        <script src="https://kit.fontawesome.com/2075c28e43.js" crossorigin="anonymous"></script>
+    <!-- icons from fontawesome -->
+    <script src="https://kit.fontawesome.com/2075c28e43.js" crossorigin="anonymous"></script>
 
-        <title>White Circle</title>
-    </head>
+    <title>White Circle</title>
+</head>
 
-    <body>
+<body>
 
-        <?php
-        if ($Customers_ID == null) {
-            include "./src/header.php";
-        } else {
-            include "./src/header2.php";
-        }
-        ?>
+    <?php
+    if ($Customers_ID == null) {
+        include "./src/header.php";
+    } else {
+        include "./src/header2.php";
+    }
+    ?>
 
-        <!-- sliding images -->
-        <div class="carousel">
-            <button class="carousel-button prev"><i class="fa-solid fa-chevron-left" style="color: #f8f9fa;"></i></button>
-            <div class="carousel-images">
-                <img src="./src/SystemData/imgs/carousel/1.jpeg" alt="Image 1">
-                <img src="./src/SystemData/imgs/carousel/2.jpeg" alt="Image 2">
-                <img src="./src/SystemData/imgs/carousel/3.jpeg" alt="Image 3">
-                <img src="./src/SystemData/imgs/carousel/4.jpeg" alt="Image 4">
-                <img src="./src/SystemData/imgs/carousel/5.jpeg" alt="Image 5">
-            </div>
-            <button class="carousel-button next"><i class="fa-solid fa-chevron-right" style="color: #f8f9fa;"></i></button>
+    <!-- sliding images -->
+    <div class="carousel">
+        <button class="carousel-button prev"><i class="fa-solid fa-chevron-left" style="color: #f8f9fa;"></i></button>
+        <div class="carousel-images">
+            <img src="./src/SystemData/imgs/carousel/1.jpg" alt="Image 1">
+            <img src="./src/SystemData/imgs/carousel/2.png" alt="Image 2">
+            <img src="./src/SystemData/imgs/carousel/3.png" alt="Image 3">
+            <img src="./src/SystemData/imgs/carousel/4.jpeg" alt="Image 4">
+            <img src="./src/SystemData/imgs/carousel/5.jpg" alt="Image 5">
         </div>
 
         <!---------- sliding script ---------->
@@ -125,10 +121,8 @@ if (strlen($_SESSION['login']) == 0) {
             </div>
         </div>
 
-        <!---------- footer php ---------->
+        <!---------- footer php ------------>
         <?php include "./src/footer.php"; ?>
-    </body>
+</body>
 
-    </html>
-
-<?php } ?>
+</html>

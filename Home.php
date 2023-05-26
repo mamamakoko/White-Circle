@@ -10,7 +10,6 @@ if ($query->rowCount() > 0) {
         if ($result->Product_Stock == 0) {
             ?>
             <div class="product">
-                <div class="outofstock">OUT OF STOCK</div>
                 <!-- <a href="./src/ProductItems.php?proid=<?php echo $result->Product_ID; ?>" style="text-decoration: none; font-family: calibri; color: #1a1a1a;"> -->
                 <img src="./src/SystemData/imgs/<?php echo $result->Product_Path . '/' . $result->Product_Thumbnail; ?>">
                 <h3 class="name">
@@ -37,7 +36,7 @@ if ($query->rowCount() > 0) {
                     </p>
                 </a>
             </div>
-
+            <!-- incrimentation -->
         <?php }
         $cnt = $cnt + 1;
     }
