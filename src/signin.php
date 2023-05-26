@@ -6,44 +6,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="../asset/style/signin.css">
+    <link rel="stylesheet" href="../asset/style/login.css">
 
-    <title>Sign In</title>
+    <title>Log in</title>
 </head>
 
 <body>
-    <div class="contianer">
-        <section>
-            <div class="brand">
-                <a href="../index.php" class="logo">WELCOME!</a>
-
-                <div class="heading">
-                    <h2>White Circle</h2>
-                    <br>
-                    <br>
-                    <p>"Carrying your World in Style"</p>
-                </div>
-        </section>
-
-        <div class="form-container">
-            <form id="signinForm" onsubmit="submitForm(event)">
-                <h2>Sign In</h2>
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="password">Password:</label>
-                    <input type="password" id="password" required>
-                </div>
-                <div class="form-group">
-                    <input type="submit" value="Sign In">
-                </div>
-            </form>
+    <div class="container">
+        <div class="welcome">
+            <h3>Welcome to White Cicle</h3>
         </div>
 
-        <script src="../asset/script/signin.js"></script>
+        <div class="form-container">
+            <form action="./functions.php" method="post">
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="firstName" required><br><br>
+
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" name="lastName" required><br><br>
+
+                <label for="phoneNumber">Phone Number:</label>
+                <input type="tel" id="phoneNumber" name="phoneNumber" required pattern="[0-9]{11}"><br><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <input type="submit" value="Sign Up">
+
+
+                <br><br>
+
+                <input type="submit" value="Log in">
+                <br>
+                <br>
+                <br>
+                <a href="./signin.php"><small>Create an account</small></a>
+            </form>
+        </div>
     </div>
+
+
 </body>
 
 </html>

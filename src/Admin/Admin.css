@@ -200,24 +200,3 @@ th {
     border: 1px solid #ccc;
     font-size: 16px;
 }
-
-/* <!-- <div class="box">
-
-<div class="navigation">
-    <h1 class="box-title">Products</h1>
-    <button class="add-button" id="add-product-button">+</button>
-</div>
-
-<div class="modal" id="add-product-modal">
-    <div class="modal-content">
-        <span class="close"></span>
-
-        <form id="add-product-form" method="post" action="./functions.php">
-            <input type="text" placeholder="Add Product" name="productname" required>
-            <button type="submit" name="add-product-form">Submit</button>
-        </form>
-
-    </div>
-</div>
-
-</div> --> */

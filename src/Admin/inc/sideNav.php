@@ -65,7 +65,7 @@
         </li> -->
         <li class="profile">
             <div class="profile-details">
-                <img src="#" alt="profileImg">
+                <img src="SystemData\page\admin.png" alt="profileImg">
                 <div class="name_job">
                     <div class="name">John Llenard</div>
                     <div class="job">Admin</div>

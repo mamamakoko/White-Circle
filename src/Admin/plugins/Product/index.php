@@ -88,9 +88,9 @@
 
                                 <button class="edit-pro-button edit" data-id="<?php echo $result->Product_ID; ?>">Edit
                                 </button>
-                                <button class="delete-pro-button"
+                                <!-- <button class="delete-pro-button"
                                     onclick="deleteProduct(<?php echo $result->Product_ID; ?>)">Delete
-                                </button>
+                                </button> -->
 
                             </td>
                         </tr>
